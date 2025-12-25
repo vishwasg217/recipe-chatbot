@@ -112,7 +112,8 @@ Open ended
 - I’m looking for low-carb Chinese dinner options.
 
 **Prompt:**
-```
+
+```text
 Given the following query combinations, write their natural language forms. 
 guidelines: 1. make the query sentences as natural and realistic as possible. 2. do not make them overtly verbose. 3. Try to mirror what a real user would ask interms of sentence structure and tone of voice. 4. make some of them question formed, and some of them sentences. 5. try to change of the sentence structure and when the dimension is mentioned, to add more variety.
 ```
