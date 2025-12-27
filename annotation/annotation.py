@@ -5,6 +5,7 @@ import json
 import glob
 
 DATASET_DIR = os.path.join(os.path.dirname(__file__), "traces")
+GENERAL_CODING_FILE = os.path.join(os.path.dirname(__file__), "general_coding.json")
 
 app, rt = mui.fast_app(hdrs=mui.Theme.blue.headers())
 
@@ -31,7 +32,8 @@ def list_traces():
 def index():
     return mui.Container(
         mui.H2("Golden Dataset Traces"),
-        list_traces()
+        list_traces(),
+        general_coding_widget()
     )
 
 def chat_bubble(m):
@@ -77,6 +79,64 @@ def get_unique_axial_coding_codes():
             codes.add(code.strip())
     return sorted(codes)
 
+def load_general_coding_notes():
+    """Load general coding notes from JSON file"""
+    if os.path.exists(GENERAL_CODING_FILE):
+        try:
+            with open(GENERAL_CODING_FILE) as f:
+                content = f.read().strip()
+                if content:
+                    data = json.loads(content)
+                    return data.get("notes", [])
+        except json.JSONDecodeError:
+            pass
+    return []
+
+def save_general_coding_notes(notes):
+    """Save general coding notes to JSON file"""
+    with open(GENERAL_CODING_FILE, "w") as f:
+        json.dump({"notes": notes}, f, indent=2)
+
+def general_coding_widget_content():
+    """Render the content of the general coding notes widget"""
+    notes = load_general_coding_notes()
+    notes_list = ft.Ul(
+        *[ft.Li(
+            ft.Div(
+                ft.Span(note, cls="flex-1"),
+                ft.Button("×", 
+                    hx_post=delete_general_note.to(idx=idx),
+                    hx_target="#general-coding-content",
+                    hx_swap="outerHTML",
+                    cls="btn btn-xs btn-circle btn-ghost"
+                ),
+                cls="flex items-center gap-2"
+            )
+        ) for idx, note in enumerate(notes)],
+        cls="list-disc pl-5 mb-2 max-h-60 overflow-y-auto"
+    ) if notes else ft.Div("No notes yet", cls="text-sm text-gray-500 mb-2")
+    
+    return ft.Div(
+        ft.H3("General Coding Notes", cls="font-bold mb-2"),
+        notes_list,
+        ft.Form(
+            mui.Input(name="note", placeholder="Add a note...", cls="mb-2"),
+            mui.Button("Add", type="submit", cls="w-full"),
+            hx_post=add_general_note.to(),
+            hx_target="#general-coding-content",
+            hx_swap="outerHTML"
+        ),
+        id="general-coding-content",
+        cls="bg-base-200 p-4 rounded-lg shadow-lg"
+    )
+
+def general_coding_widget():
+    """Render the general coding notes widget container"""
+    return ft.Div(
+        general_coding_widget_content(),
+        cls="fixed bottom-4 right-4 w-80 z-50"
+    )
+
 @rt
 def annotate(fname:str):
     path = os.path.join(DATASET_DIR, fname)
@@ -116,6 +176,7 @@ def annotate(fname:str):
                 cls='w-full flex flex-col gap-2'
             ),
         ),
+        general_coding_widget()
     )
 
 @rt
@@ -129,6 +190,24 @@ def save_annotation(fname:str, notes:str, axial_coding_code:str=None, next_fname
     with open(path, "w") as f:
         json.dump(data, f)
     return ft.Redirect(annotate.to(fname=next_fname))
+
+@rt
+def add_general_note(note:str):
+    """Add a new general coding note"""
+    if note and note.strip():
+        notes = load_general_coding_notes()
+        notes.append(note.strip())
+        save_general_coding_notes(notes)
+    return general_coding_widget_content()
+
+@rt
+def delete_general_note(idx:int):
+    """Delete a general coding note by index"""
+    notes = load_general_coding_notes()
+    if 0 <= idx < len(notes):
+        notes.pop(idx)
+        save_general_coding_notes(notes)
+    return general_coding_widget_content()
 
 @rt
 def theme():

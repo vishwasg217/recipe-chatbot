@@ -1,0 +1,13 @@
+{
+  "notes": [
+    "mention serving size of the dish",
+    "integrate user info such as geographic location so that ingredients, recipes, taste etc is formulated based on that",
+    "Add a section which has warnings, pitfall, cautions that the cook needs to be aware of.",
+    "Include links to imag or google search for each ingredient, so that the user has a reference incase if not aware of the ingredient",
+    "add an ingredient black list.",
+    "add an ingredient white list as well.",
+    "Add macros section.",
+    "add nutritional benefits section.",
+    "modify the utensils list to also include appliances such as oven, microwave, rice cooker etc."
+  ]
+}
