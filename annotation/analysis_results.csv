@@ -1,0 +1,36 @@
+Request,Issue,Categories,Severity
+I'm looking for a dairy-free English breakfast with eggs that I can make in about 20-30 minutes.,Be more detailed in terms of how much time it takes for the bread to become golden brown.,"Timing & Specificity, Completeness, Clarity & Detail",Critical
+I'm looking for a dairy-free English breakfast with eggs that I can make in about 20-30 minutes.,Specify how much time it takes for the olive oil to heat in the pan,Timing & Specificity,Critical
+I'm looking for a dairy-free English breakfast with eggs that I can make in about 20-30 minutes.,"the use of spatula, knife, chopping board etc., not mentioned during the instructions. Ideally should be mentioned even if it is a bit obvious.",Utensil Usage,Minor
+Suggest an Indian lunch dish with mutton that takes roughly 30 to 60 minutes to cook.,step 6 must be more specific about which color the meat should become and give an approximate time it would take achieve that.,"Timing & Specificity, Clarity & Detail",Critical
+Suggest an Indian lunch dish with mutton that takes roughly 30 to 60 minutes to cook.,"Since the mutton curry cannot be consumed just by itself and requires rice or bread, that must also be included in the recipe and factored into the cooking time and effort.","Timing & Specificity, Completeness",Critical
+I want a quick Italian dessert with chocolate-something I can make in 15 to 20 minutes.,"in step 5, the phrase ""well incorporated"" is very vague.",Vague Language,Critical
+I want a quick Italian dessert with chocolate-something I can make in 15 to 20 minutes.,"If possible to add supplements such as a protein powder to the recipe, it should be mentioned as a variation.","Utensil Usage, Variations & Alternatives",Minor
+"Any American fast-food-style burger ideas for dinner, but without beef?",Unsure as to why four burgers are being cooked for a single person.,Portion Size,Important
+"Any American fast-food-style burger ideas for dinner, but without beef?",Not clear whether all four patties need to be cooked at the same time or one after the other.,"Timing & Specificity, Clarity & Detail, Portion Size, Cooking Process",Critical
+"Any American fast-food-style burger ideas for dinner, but without beef?","If it is one after the other, than the total time will be more than 22 minutes","Timing & Specificity, Cooking Process",Critical
+"Looking for a Middle Eastern lamb dish for lunch-no beef, and around an hour of cooking time.","Kofta alone is not a complete meal. Other things such as salad, bread or anything else that provides a balanced nutrional profile should be included for meals such as lunch and dinner.",Completeness,Critical
+Can you recommend a Chinese chicken lunch recipe with no beef or seafood?,"Stir fry alone is not enough, the meal shouldve included rice or bread to make it a complete meal.",Completeness,Critical
+I want an Indian vegetarian breakfast using rice that I can finish in about half an hour.,Upma traditionally is not directly made from rice but from rava. So the recipe itself is wrong.,Completeness,Critical
+I need a quick banana smoothie idea for breakfast—something under 20 minutes.,"Should've included more seed and dry fruits for the smoothie to be more protien, fibre and other nutrients.",Completeness,Critical
+"Suggest an Italian vegetarian pasta for lunch that's a bit more involved, maybe 45 to 60 minutes.",Unsure if ricota salata cheese is widely available globally.,Other,Minor
+Any gluten-free Chinese shrimp dishes that work well for dinner?,shouldve included cooking rice or noodles to make it a complete meal.,Completeness,Critical
+"I'm planning an Indian vegetarian dinner with lentils-dairy-free, and I don't mind a longer cook time.",dal requires rice or bread to go with it for a complete meal.,Completeness,Critical
+"I want a quick, nut-free yogurt snack I can put together in 10 to 15 minutes.",serving utensil size should be mentioned,"Completeness, Utensil Usage",Critical
+"Looking for a Middle Eastern vegetarian dinner using chickpeas, with a cooking time under 70 minutes.","The first sentence of the step is being highlighted, which is not consistent with other recipes generated.",Clarity & Detail,Important
+Suggest an English fish dish for lunch that takes around half an hour.,"many people may not have oven in their kitchen, so alternatives should be suggested for such appliances.",Variations & Alternatives,Minor
+Suggest an English fish dish for lunch that takes around half an hour.,Salad must have been included within the recipe to make the meal more nutritious and complete.,Completeness,Critical
+I want an Italian chicken dinner that's both gluten-free and dairy-free.,highlighting in steps not consistent with other traces.,Other,Minor
+I want an Italian chicken dinner that's both gluten-free and dairy-free.,4 chicken breasts is a bit much for one serving.,Completeness,Critical
+I want an Italian chicken dinner that's both gluten-free and dairy-free.,"meat thermometer is used in the instructions, which likely most people wont have.",Clarity & Detail,Important
+I want an Italian chicken dinner that's both gluten-free and dairy-free.,meat thermometer is also not mentioned in the utensils list.,Utensil Usage,Minor
+Need a quick vegetarian Mexican snack-something salsa-based.,The oven should have been mentioned in the utensils/appliances list.,Utensil Usage,Minor
+I just want a simple Italian-style breakfast centered around coffee.,"should have provided more details on how to make the coffee, instead of just instructing to use the coffee machine.",Clarity & Detail,Important
+Show me Italian dishes that feature chicken.,salad/vegetables and rice/bread shouldve been added to make the meal more complete.,Completeness,Critical
+I'm looking for Indian food ideas-just no beef.,"could've suggested meat other than beef, like chicken or mutton as well, instead of assuming a vegetarian dish. Should be a vegetarian meal only if explictly mentioned.","Completeness, Utensil Usage",Critical
+I'm looking for Indian food ideas-just no beef.,needed rice/bread to make the meal more complete.,Completeness,Critical
+What can I make for dinner tonight?,shouldve mentioned the cuisine of the recipe if the cuisineine was not explicitly mentioned in the query.,Utensil Usage,Minor
+What can I make for dinner tonight?,rice/ bread and salad necessary here to make the meal more complete.,Completeness,Critical
+Give me some vegetarian ideas using lentils.,rice/bread required here to make the meal more complete.,Completeness,Critical
+Give me some vegetarian ideas using lentils.,"no seperate subsections in the description section for health benefits, cooking time etc.",Timing & Specificity,Critical
+I need a lunch recipe with rice that takes about 30 minutes.,"should have been a meat based recipe, as it is not explicitly mentioned in the query to be vegetarian.",Utensil Usage,Minor
