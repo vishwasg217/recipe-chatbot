@@ -18,9 +18,24 @@ load_dotenv(override=False)
 
 # --- Constants -------------------------------------------------------------------
 
+INGREDIENT_BLACK_LIST = [
+    "Eggplant",
+    "Tofu",
+    "Soy Milk",
+]
+
+INGREDIENT_WHITE_LIST = [
+    "Chicken",
+    "Lamb",
+    "Eggs",
+    "Dark Chocolate",
+    "Greek Yoghurt"
+]
+
 # Load system prompt from markdown file
 _PROMPT_PATH = Path(__file__).parent / "system_prompt.md"
 SYSTEM_PROMPT: Final[str] = _PROMPT_PATH.read_text().strip()
+SYSTEM_PROMPT.format(ingredient_black_list=INGREDIENT_BLACK_LIST, ingredient_white_list=INGREDIENT_WHITE_LIST)
 
 # Fetch configuration *after* we loaded the .env file.
 MODEL_NAME: Final[str] = os.environ.get("MODEL_NAME", "gpt-4o-mini")
